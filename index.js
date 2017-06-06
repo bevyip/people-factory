@@ -8,9 +8,13 @@ function handleSubmit(e){
     const col = f.col.value
     const details = document.querySelector('#details')
 
-    details.innerHTML = `<em>${name}</em>` //diff from .textContent - legit change design
-   //backticks (`) and ${} to put expression inside no need + 
-   
+    //details.innerHTML = `<em>${name}</em>` //diff from .textContent - legit change design
+    //backticks (`) and ${} to put expression inside no need + 
+
+    const em = document.createElement('em')
+    em.textContent = name 
+    details.appendChild(em)
+    
     document.querySelector('h1').textContent = "This page belongs to " + name + " " + lastName
     document.querySelector('#empty').textContent = "Welcome, " + name + " " + lastName + "!!!!"
     if(col < 5){
