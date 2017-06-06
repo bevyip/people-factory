@@ -6,7 +6,9 @@ function handleSubmit(e){
     const name = f.personName.value
     const lastName = f.personLastName.value 
     const col = f.col.value
-    
+    const details = document.querySelector('#details')
+
+    details.innerHTML = '<em>' + name + '</em>' //diff from .textContent - legit change design
     document.querySelector('h1').textContent = "This page belongs to " + name + " " + lastName
     document.querySelector('#empty').textContent = "Welcome, " + name + " " + lastName + "!!!!"
     if(col < 5){
