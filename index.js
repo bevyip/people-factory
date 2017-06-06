@@ -12,13 +12,23 @@ function handleSubmit(e){
     const favColor = f.favoriteColor.value
     const age = f.age.value
 
-    const colorDiv = `
-        <div style="background-color: ${favColor}; width: 100px; height: 50px;"</div>
-    `
+    // const colorDiv = `
+    //     <div style="background-color: ${favColor}; width: 100px; height: 50px;"</div>
+    // `
+    
+    function renderColor(color){
+        const colorDiv = document.createElement('div')
+        colorDiv.style.backgroundColor = color
+        colorDiv.style.width = '100px'
+        colorDiv.style.height = '50px'
+        
+        return colorDiv
+    }
+    
     details.innerHTML = `
         <ul>
             <li>Name: ${name}</li>
-            <li>Favourite Colour: ${colorDiv}</li>
+            <li>Favourite Colour: ${renderColor(favColor).outerHTML}</li>
             <li>Age: ${age}</li>
         </ul>
     `
