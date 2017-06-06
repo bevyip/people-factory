@@ -15,11 +15,10 @@ function handleSubmit(e){
     const colorDiv = `
         <div style="background-color: ${favColor}; width: 100px; height: 50px;"</div>
     `
-    
     details.innerHTML = `
         <ul>
             <li>Name: ${name}</li>
-            <li>Favourite Colour: ${favColor}</li>
+            <li>Favourite Colour: ${colorDiv}</li>
             <li>Age: ${age}</li>
         </ul>
     `
