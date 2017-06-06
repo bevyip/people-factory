@@ -7,9 +7,18 @@ function handleSubmit(e){
     const lastName = f.personLastName.value 
     const col = f.col.value
     const details = document.querySelector('#details')
-
     //details.innerHTML = `<em>${name}</em>` //diff from .textContent - legit change design
     //backticks (`) and ${} to put expression inside no need + 
+    const favColor = f.favouriteColour.value
+    const age = f.age.value
+
+    details.innerHTML = `
+        <ul>
+            <li>Name: ${name}</li>
+            <li>Favourite Colour: ${favouriteColour}</li>
+            <li>Age: ${age}</li>
+        </ul>
+    `
 
     const em = document.createElement('em')
     em.textContent = name 
