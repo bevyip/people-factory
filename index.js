@@ -19,12 +19,11 @@ function renderListItem(fieldName, value){
 function renderList(personData){
         const list = document.createElement('ul')
         
-        //loop over ['name, 'favColor', 'age']
+        //loop over ['name, 'favColor', 'age'])
         Object.keys(personData).map(function(fieldName){
             const li = renderListItem(fieldName, personData[fieldName])
             list.appendChild(li)
         })
-        
         return list 
     }
     
