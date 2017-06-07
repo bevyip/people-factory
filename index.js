@@ -39,7 +39,7 @@ function handleSubmit(e){
     
     const person = {
         name: f.personName.value,
-        favColor: renderColor(f.favoriteColor.value).outerHTML,
+        favoriteColor: renderColor(f.favoriteColor.value).outerHTML,
         age: f.age.value,
     }
 
